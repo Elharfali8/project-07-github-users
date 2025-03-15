@@ -1,26 +1,74 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+
+/* Light Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* White background */
+  --foreground: #2d2d2d; /* Dark gray text */
+  --card: #f9f9f9; /* Light card background */
+  --card-foreground: #2d2d2d; /* Dark text inside cards */
+  --primary: #009688; /* Teal for primary actions (buttons, links) */
+  --primary-foreground: #ffffff; /* White text on primary elements */
+  --secondary: #f0f0f0; /* Light gray for secondary elements */
+  --secondary-foreground: #2d2d2d; /* Dark text for secondary elements */
+  --muted: #f4f4f4; /* Slightly muted background for containers */
+  --muted-foreground: #9e9e9e; /* Muted text */
+  --destructive: #e57373; /* Red for destructive actions */
+  --destructive-foreground: #ffffff; /* White text on destructive elements */
+  --border: #dcdcdc; /* Light border */
+  --input: #f9f9f9; /* Background color for input fields */
+  --ring: #009688; /* Accent color for focus rings */
+  --radius: 8px; /* Rounded corners */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark Theme */
+.dark {
+  --background: #121212; /* Dark background */
+  --foreground: #e0e0e0; /* Light gray text */
+  --card: #1e1e1e; /* Dark card background */
+  --card-foreground: #e0e0e0; /* Light text inside cards */
+  --primary: #80cbc4; /* Light teal for primary actions */
+  --primary-foreground: #121212; /* Dark text on primary elements */
+  --secondary: #333333; /* Darker gray for secondary elements */
+  --secondary-foreground: #e0e0e0; /* Light text for secondary elements */
+  --muted: #444444; /* Darker muted background */
+  --muted-foreground: #bbbbbb; /* Muted light text */
+  --destructive: #e57373; /* Red for destructive actions */
+  --destructive-foreground: #ffffff; /* White text on destructive elements */
+  --border: #666666; /* Dark border */
+  --input: #333333; /* Dark background color for input fields */
+  --ring: #80cbc4; /* Accent color for focus rings */
+  --radius: 8px; /* Rounded corners */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+  color: var(--muted-foreground);
+}
+
+nav {
+  background: var(--card);
+}
+
+h1 {
+  color: var(--primary);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: var(--background);
+}
+
+.destructive-btn {
+  background: var(--destructive);
+  color: var(--background);
 }
