@@ -12,6 +12,7 @@
   --card: #f9f9f9; /* Light card background */
   --card-foreground: #2d2d2d; /* Dark text inside cards */
   --primary: #009688; /* Teal for primary actions (buttons, links) */
+  --primary-hover: #008376; /* Teal for primary actions (buttons, links) */
   --primary-foreground: #ffffff; /* White text on primary elements */
   --secondary: #f0f0f0; /* Light gray for secondary elements */
   --secondary-foreground: #2d2d2d; /* Dark text for secondary elements */
@@ -33,6 +34,7 @@
   --card: #1e1e1e; /* Dark card background */
   --card-foreground: #e0e0e0; /* Light text inside cards */
   --primary: #80cbc4; /* Light teal for primary actions */
+  --primary-hover: #6faea8; /* Light teal for primary actions */
   --primary-foreground: #121212; /* Dark text on primary elements */
   --secondary: #333333; /* Darker gray for secondary elements */
   --secondary-foreground: #e0e0e0; /* Light text for secondary elements */
@@ -55,6 +57,8 @@ body {
   color: var(--muted-foreground);
 }
 
+
+
 nav {
   background: var(--card);
 }
@@ -65,10 +69,47 @@ h1 {
 
 .primary-btn {
   background: var(--primary);
-  color: var(--background);
+  color: #FFFFFF;
+  transition: all ease-in-out 150ms;
+  font-weight: 500;
+}
+
+.primary-btn:hover {
+  background-color: var(--primary-hover);
 }
 
 .destructive-btn {
   background: var(--destructive);
   color: var(--background);
+}
+
+.m-container {
+  max-width: 1200px;
+}
+
+.main-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card {
+  background: var(--card);
+}
+
+/* For large screens (lg) */
+@media (min-width: 1024px) {
+  .main-container {
+    padding-left: 0.5rem;  
+    padding-right: 0.5rem; 
+  }
+}
+
+/* For extra-large screens (xl) */
+@media (min-width: 1280px) {
+  .main-container {
+    padding-left: 0.25rem;  
+    padding-right: 0.25rem; 
+  }
 }

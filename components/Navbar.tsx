@@ -6,8 +6,8 @@ const Navbar = () => {
   const { data: session } = useSession();
 
   return (
-    <nav className="p-4  shadow-md  grid place-items-center      ">
-          <div className="flex justify-between items-center  container main-container">
+    <nav className="p-4  shadow-lg      ">
+          <div className="flex justify-between items-center  m-container main-container">
           <h1 className="text-xl lg:text-2xl font-semibold">GitHub Users</h1>
       {session ? (
         <div className="flex items-center gap-4">
