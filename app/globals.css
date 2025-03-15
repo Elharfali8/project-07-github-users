@@ -74,6 +74,23 @@ h1 {
   font-weight: 500;
 }
 
+.fl-btn {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  padding-right: 14px;
+  padding-left: 14px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all ease-in-out 150ms;
+}
+
+.fl-btn:hover {
+  color: #FFFFFF;
+  background: var(--primary);
+}
+
 .primary-btn:hover {
   background-color: var(--primary-hover);
 }

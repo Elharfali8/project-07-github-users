@@ -1,5 +1,6 @@
 "use client"; // Ensure this is added
 
+import Card from "@/components/Card";
 import CardArticle from "@/components/CardArticle";
 import SearchContainer from "@/components/SearchContainer";
 import { stats } from "@/utils/stats";
@@ -34,6 +35,9 @@ export default function Dashboard() {
           {stats.map((state) => {
             return <CardArticle key={state.id} {...state} />
           })}
+        </div>
+        <div className="grid gap-6 lg:grid-cols-2">
+            <Card title="user" btn="follow" name="youssef elharfali" tagName='elharfali8' desc='web developer' company='Elharfali company' location='Marrakech, MA' link="www.johnsmilga.com" />
         </div>
       </div>
     </main>
