@@ -57,7 +57,10 @@ body {
   color: var(--muted-foreground);
 }
 
-
+.main-border {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+}
 
 nav {
   background: var(--card);

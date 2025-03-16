@@ -37,7 +37,8 @@ export default function Dashboard() {
           })}
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
-            <Card title="user" btn="follow" name="youssef elharfali" tagName='elharfali8' desc='web developer' company='Elharfali company' location='Marrakech, MA' link="www.johnsmilga.com" />
+          <Card title="user" btn="follow" name="youssef elharfali" tagName='elharfali8' desc='web developer' company='Elharfali company' location='Marrakech, MA' link="www.johnsmilga.com" />
+          <Card title="followers" />
         </div>
       </div>
     </main>
