@@ -19,7 +19,7 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
   return (
       <article className='h-full'>
           <span className='card py-1 px-4 md:text-lg text capitalize rounded-t-lg'>{title}</span>
-          <div className='py-6 px-8 card rounded-tr-lg rounded-b-lg shadow-md h-full'>
+          <div className='pt-6 px-8 card rounded-tr-lg rounded-b-lg shadow-md h-full'>
               {title === 'user' && (
                   <div>
                       <div className='flex items-center justify-between'>
@@ -58,9 +58,9 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
                   </div>
               )}
               {title === 'followers' && (
-                  <div className='max-h-[280px] overflow-y-auto grid gap-1'>
-                      <div className='flex items-center gap-3 main-border p-1 bg-white dark:bg-black'>
-                      <span className=' h-12 w-12 bg-blue-400 rounded-full grid place-items-center'>
+                  <div className='max-h-[280px] overflow-y-auto grid gap-2'>
+                      <div className='flex items-center gap-3 main-border px-1 bg-white dark:bg-black'>
+                      <span className=' h-11 w-11 bg-blue-400 rounded-full grid place-items-center'>
                               Y
                           </span>
                           <div>
@@ -68,8 +68,8 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
                           <p className='text'>@tagName</p>
                           </div>
                       </div>
-                      <div className='flex items-center gap-3 main-border p-1 bg-white dark:bg-black'>
-                      <span className=' h-12 w-12 bg-blue-400 rounded-full grid place-items-center'>
+                      <div className='flex items-center gap-3 main-border px-1 bg-white dark:bg-black'>
+                      <span className=' h-11 w-11 bg-blue-400 rounded-full grid place-items-center'>
                               Y
                           </span>
                           <div>
@@ -77,8 +77,8 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
                           <p className='text'>@tagName</p>
                           </div>
                       </div>
-                      <div className='flex items-center gap-3 main-border p-1 bg-white dark:bg-black'>
-                      <span className=' h-12 w-12 bg-blue-400 rounded-full grid place-items-center'>
+                      <div className='flex items-center gap-3 main-border px-1 bg-white dark:bg-black'>
+                      <span className=' h-11 w-11 bg-blue-400 rounded-full grid place-items-center'>
                               Y
                           </span>
                           <div>
@@ -86,8 +86,8 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
                           <p className='text'>@tagName</p>
                           </div>
                       </div>
-                      <div className='flex items-center gap-3 main-border p-1 bg-white dark:bg-black'>
-                      <span className=' h-12 w-12 bg-blue-400 rounded-full grid place-items-center'>
+                      <div className='flex items-center gap-3 main-border px-1 bg-white dark:bg-black'>
+                      <span className=' h-11 w-11 bg-blue-400 rounded-full grid place-items-center'>
                               Y
                           </span>
                           <div>
@@ -95,8 +95,8 @@ const Card = ({title, btn, name, tagName, desc, company, location, link}: CardTy
                           <p className='text'>@tagName</p>
                           </div>
                       </div>
-                      <div className='flex items-center gap-3 main-border p-1 bg-white dark:bg-black'>
-                      <span className=' h-12 w-12 bg-blue-400 rounded-full grid place-items-center'>
+                      <div className='flex items-center gap-3 main-border px-1 bg-white dark:bg-black'>
+                      <span className=' h-11 w-11 bg-blue-400 rounded-full grid place-items-center'>
                               Y
                           </span>
                           <div>
