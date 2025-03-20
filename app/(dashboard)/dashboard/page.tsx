@@ -1,5 +1,4 @@
-"use client"; // Ensure this is added
-
+"use client"; 
 import Card from "@/components/Card";
 import CardArticle from "@/components/CardArticle";
 import PieChartComponent from "@/components/PieChartComponent";
@@ -35,7 +34,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     if (username.trim()) {
-      dispatch(fetchUserData(username)); // Dispatch the function with the username
+      dispatch(fetchUserData(username)); 
     }
   }, [dispatch, username])
 
@@ -43,6 +42,13 @@ export default function Dashboard() {
   const followers = data?.followers?.totalCount ?? 0
   const following = data?.following?.totalCount ?? 0
   const gists = data?.gists?.totalCount ?? 0  
+  const name = data?.name
+  const tagName = data?.login
+  const avatar = data?.avatarUrl
+  const bio = data?.bio
+  const url = data?.url
+  const company = data?.company
+  const location = data?.location
 
   if (!session) {
     return (
@@ -97,7 +103,9 @@ export default function Dashboard() {
         </div>
         {/* --------- */}
         <div className="grid gap-12 lg:grid-cols-2 mb-4 lg:mb-8">
-          <Card title="user" btn="follow" name="youssef elharfali" tagName='elharfali8' desc='web developer' company='Elharfali company' location='Marrakech, MA' link="www.johnsmilga.com" />
+          {/* USER PROFILE */}
+          <Card title="user" btn="follow" name={name} tagName={tagName} avatar={avatar} bio={bio} company={company} location={location} link={url} />
+          {/* USER FOLLOWERS */}
           <Card title="followers" />
         </div>
         {/* ---------- */}

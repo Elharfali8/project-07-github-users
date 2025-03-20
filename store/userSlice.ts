@@ -12,8 +12,12 @@ interface Repository {
 
 interface UserData {
   name: string;
+  login: string;
   bio: string;
   avatarUrl: string;
+  url: string;
+  company: string;
+  location: string;
   followers: { totalCount: number };
   following: { totalCount: number };
   repositories: { 
@@ -32,6 +36,9 @@ interface GitHubUserResponse {
     name: string;
     avatarUrl: string;
     bio: string;
+    url: string;
+    company: string;
+    location: string;
     followers: { totalCount: number };
     following: { totalCount: number };
     repositories: { 
@@ -73,6 +80,8 @@ export const fetchUserData = createAsyncThunk(
       avatarUrl
       bio
       url
+      company
+      location
       repositories(first: 100) {
         totalCount
         nodes {
